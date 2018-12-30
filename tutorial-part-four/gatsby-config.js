@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Pandas eating lots',
+    indexTitle: 'Amazing Pandas Eating Things',
     picTitle: 'Those are some cool pandas aight?'
   },
   plugins: [
@@ -11,6 +12,7 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
+    'gatsby-transformer-remark',
     `gatsby-plugin-emotion`,
     {
       resolve: 'gatsby-plugin-typography',
