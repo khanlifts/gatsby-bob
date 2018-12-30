@@ -4,6 +4,13 @@ module.exports = {
     picTitle: 'Those are some cool pandas aight?'
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/`
+      }
+    },
     `gatsby-plugin-emotion`,
     {
       resolve: 'gatsby-plugin-typography',
