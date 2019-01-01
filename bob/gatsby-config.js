@@ -1,34 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `BoB`,
-    description: `Best of Beerfestival`,
-    author: `Cyril Khan`,
+    title: `Gatsby Default Starter`,
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    author: `@gatsbyjs`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        // your wordpress source
-        baseUrl: `gatsbyjsexamplewordpress.wordpress.com`,
-        protocol: `https`,
-        // is it hosted on wordpress.com, or self-hosted?
-        hostingWPCOM: false,
-        // does your site use the Advanced Custom Fields Plugin?
-        useACF: false,
-        auth: {
-          // If auth.user and auth.pass are filled, then the source plugin will be allowed
-          // to access endpoints that are protected with .htaccess.
-          // htaccess_user: "user",
-          // htaccess_pass: "craftbeer8",
-          // htaccess_sendImmediately: true,
-
-          // If you use "JWT Authentication for WP REST API" (https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/)
-          // plugin, you can specify user and password to obtain access token and use authenticated requests against wordpress REST API.
-          // jwt_user: process.env.JWT_USER,
-          // jwt_pass: process.env.JWT_PASSWORD,
-        },
         name: `images`,
         path: `${__dirname}/src/images`,
       },
