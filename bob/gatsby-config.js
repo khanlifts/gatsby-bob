@@ -1,9 +1,11 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     title: `Best of Beer Festival`,
     description: `dummy description`,
     author: `Cyril Khan`,
-    menuItems: [`HOME`, `SPONSOREN`, `PROGRAMM`, `KONTAKT`, `IMPRESSIONEN`]
+    menuItems: [`home`, `sponsoren`, `programm`, `kontakt`, `impressionen`]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,7 +14,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
     `gatsby-transformer-sharp`,

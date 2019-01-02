@@ -3,17 +3,13 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from "styled-components"
 
-import Header from './header'
+import Header from './Header'
 
 const StyledLayout = styled.div`
   height: 100vh;
   background: black;
   color: white;
-  
-  a, li:hover {
-    cursor: pointer;
-    color: #B28564;
-  }
+  transition: color 2s;
 `
 
 const Layout = ({ children }) => (
@@ -33,14 +29,7 @@ const Layout = ({ children }) => (
       <>
         <StyledLayout>
           <Header menuItems={data.site.siteMetadata.menuItems} />
-          <div
-            style={{
-              margin: `0 auto`,
-              maxWidth: 960,
-              padding: `0px 1.0875rem 1.45rem`,
-              paddingTop: `0`,
-            }}
-          >
+          <div>
             {children}
           </div>
         </StyledLayout>

@@ -1,8 +1,25 @@
 import Typography from 'typography'
-import oceanBeachTheme from 'typography-theme-ocean-beach'
-oceanBeachTheme.baseFontSize = '22'
 
-const typography = new Typography(oceanBeachTheme)
+const typography = new Typography({
+  baseFontSize: "16px",
+  baseLineHeight: 1.666,
+  headerFontFamily: [
+    "Bitter",
+    "Arial",
+    "sans-serif",
+  ],
+  bodyFontFamily: ["Bitter", "serif"],
+  googleFonts: [
+    {
+      name: 'Bitter',
+      styles: [
+        `400`,
+        `400i`,
+        '700',
+      ],
+    },
+  ],
+})
 
 export default typography
 
