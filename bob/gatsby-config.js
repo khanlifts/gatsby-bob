@@ -3,6 +3,7 @@ const path = require(`path`)
 module.exports = {
   siteMetadata: {
     title: `Best of Beer Festival`,
+    subtitle: `Good People Drink Good Beer`,
     description: `dummy description`,
     author: `Cyril Khan`,
     menuItems: [`home`, `sponsoren`, `programm`, `kontakt`, `impressionen`]

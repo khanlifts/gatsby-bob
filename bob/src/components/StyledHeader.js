@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 const StyledHeader = styled.div`
-  border-bottom: 1px solid gray;
   height: 150px;
   
   nav {
