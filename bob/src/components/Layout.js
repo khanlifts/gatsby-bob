@@ -6,7 +6,6 @@ import styled from "styled-components"
 import Header from './Header'
 
 const StyledLayout = styled.div`
-  height: 100vh;
   background: black;
   color: white;
   transition: color 2s;

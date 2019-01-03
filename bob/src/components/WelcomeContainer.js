@@ -10,7 +10,7 @@ const StyledWelcomeContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   height: 50vh;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
 `
 
