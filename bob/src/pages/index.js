@@ -5,6 +5,7 @@ import SEO from '../components/Seo'
 import WelcomeContainer from '../components/WelcomeContainer'
 import NewsContainer from '../components/NewsContainer'
 import IntroContainer from '../components/IntroContainer'
+import PreviewContainer from '../components/PreviewContainer'
 
 const IndexPage = () => (
   <Layout>
@@ -12,6 +13,7 @@ const IndexPage = () => (
     <WelcomeContainer />
     <NewsContainer />
     <IntroContainer />
+    <PreviewContainer />
   </Layout>
 )
 
