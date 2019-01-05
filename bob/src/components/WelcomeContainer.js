@@ -10,13 +10,13 @@ const StyledWelcomeContainer = styled.div`
   justify-content: space-evenly;
   width: 60%;
   margin: 0 auto;
-  padding: 5rem 0;
+  padding: 5rem 0 8rem 0;
   h1 {
     margin-bottom: 3rem;
   }
   
   @media (max-width: 550px) {
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
     .container__right {
       display: none;
     }

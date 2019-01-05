@@ -20,10 +20,10 @@ const StyledIntroContainer = styled.div`
       display: none;
     }
   }
-  @media (max-width: 800px) {
+  @media (max-width: 550px) {
+    margin: 6rem auto;
     .intro__text {
       width: 80%;
-      font-size: 14px;
     }
   }
 `

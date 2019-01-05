@@ -33,15 +33,18 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      }
-    },
-    {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/images/logo-bob-full.png",
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Bitter`,
+          `400, 400i, 700, 700i`
+        ]
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -10,14 +10,6 @@ const StyledIntroContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   
-  h2 {
-    font-size: 40px;
-  }
-  
-  h4 {
-    font-size: 25px;
-  }
-  
   span {
     display: inline;
   }
@@ -34,17 +26,41 @@ const StyledIntroContainer = styled.div`
     padding-right: 3rem;
   }
   .icons {
-    font-size: 40px;
     margin-bottom: 20px;
     transition: color 1s;
+    font-size: 40px;
   }
   .icons:hover {
     color: #B28564;
   }
   
   @media (max-width: 1200px) {
+    display: block;
     .preview__image {
-      display: none;
+      width: 50%;
+      margin: 0 auto;     
+    }
+  }
+  
+    @media (max-width: 550px) {
+    .preview__points {
+      display: block;
+    }
+    .preview__points-left, .preview__points-right {
+      padding: 0;
+    }
+    .icons {
+      font-size: 30px;
+      width: 100%;
+    }
+    h4, h2 {
+      text-align: center;
+    }
+    h4 {
+      font-size: 18px;
+    }
+    p {
+      margin-bottom: 40px;
     }
   }
 `

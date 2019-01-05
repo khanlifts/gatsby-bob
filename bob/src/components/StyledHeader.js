@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 const StyledHeader = styled.div`
+  padding-top: 3rem;
   height: 150px;
   
   nav {
@@ -11,7 +12,7 @@ const StyledHeader = styled.div`
   .nav-links {
     display: inline-block;
     vertical-align: top;
-    margin-right: 45px;
+    margin-right: calc(7% - 3rem);
     height: 80px;       
     line-height: 150px;
     text-decoration: none;
@@ -35,9 +36,6 @@ const StyledHeader = styled.div`
     vertical-align: middle;
   }
   
-  .fb-icon {
-    font-size: 16px;
-  }
   
   @media (max-width: 990px) {
     nav {
