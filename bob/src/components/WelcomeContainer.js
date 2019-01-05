@@ -8,10 +8,19 @@ const StyledWelcomeContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: center;
-  height: 50vh;
   width: 60%;
   margin: 0 auto;
+  padding: 5rem 0;
+  h1 {
+    margin-bottom: 3rem;
+  }
+  
+  @media (max-width: 550px) {
+    padding: 2rem 0;
+    .container__right {
+      display: none;
+    }
+  }
 `
 
 export default () => (

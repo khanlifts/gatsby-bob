@@ -9,6 +9,7 @@ const StyledLayout = styled.div`
   background: black;
   color: white;
   transition: color 2s;
+  overflow-x: hidden;
 `
 
 const Layout = ({ children }) => (
