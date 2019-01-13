@@ -3,15 +3,15 @@ import styled from "styled-components"
 const StyledHeader = styled.div`
   font-size: 18px;
   margin-top: 4rem;
-  height: 200px;
-  z-index: 1;
+  height: 270px;
+  z-index: 2;
   
   .menu ul {
     list-style: none;
     margin: 0 auto;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
     width: 60%;
    }
