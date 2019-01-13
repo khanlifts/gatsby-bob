@@ -1,54 +1,87 @@
 import styled from "styled-components"
 
 const StyledHeader = styled.div`
-  padding-top: 3rem;
-  height: 150px;
+  font-size: 18px;
+  margin-top: 4rem;
+  height: 200px;
+  z-index: 1;
   
-  nav {
+  .menu ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 60%;
+   }
+   
+   @media (max-width: 1050px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+    text-align: center;
+    .menu ul {
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      li > ul {
+      opacity: 0;
+      height: 0;
+      transition: .3s all ease-in;
+      li > a {
+        .menu ul li > ul {
+          opacity: 1;
+          height: 100%;
+        }
+      }
+      }
+      li > ul > li {
+        margin-top: -20px;
+      }
+    }
+    .logo__item {
+      display: none;
+    }
+  }
+   
+  .menu ul li > ul {
+    visibility: hidden;
+    flex-direction: column;
+    margin-top: 30px;
+    li {
+      width: 100%;
+      background-color: white;
+      border-bottom: 1px solid gray;
+      a {
+        color: black;
+      }
+    }
+  }  
+  
+  .menu ul li:hover > ul {
+    display: flex;
+    visibility: visible;
+    width: 100%;
+  } 
+  
+  .logo__item {
     position: relative;
-    left: 10px;
+    bottom: 30px;
   }
   
-  .nav-links {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: calc(7% - 3rem);
-    height: 80px;       
-    line-height: 150px;
+  .menu a {
+    display: flex;
     text-decoration: none;
     color: white;
-  }
-  
-  .nav-links:hover {
-    cursor: pointer;
-    color: #B28564;
-    transition: color .5s;
-  }
-  
-   .nav-links:active {
-    padding-bottom: 50px;
-    border-bottom: 5px solid #B28564
-  }
-  
-  .menu-icon {
-    font-size: 32px;
-    visibility: hidden;
-    vertical-align: middle;
-  }
-  
-  
-  @media (max-width: 990px) {
-    nav {
-      left: 55px;
-    }
-    .nav-links {
-      visibility: hidden;
-      margin-right: 0;
-    }
-    .menu-icon {
-      visibility: visible;
+    padding: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    &:hover {
+      color: #b28564;
     }
   }
+  
 `
 
 export default StyledHeader

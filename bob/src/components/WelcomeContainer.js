@@ -8,7 +8,8 @@ const StyledWelcomeContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 60%;
+  width: 70%;
+  align-items: center;
   margin: 0 auto;
   padding: 5rem 0 8rem 0;
   h1 {
