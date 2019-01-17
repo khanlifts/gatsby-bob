@@ -6,6 +6,7 @@ import WelcomeContainer from '../components/WelcomeContainer'
 import NewsContainer from '../components/NewsContainer'
 import IntroContainer from '../components/IntroContainer'
 import PreviewContainer from '../components/PreviewContainer'
+import ImpressionsContainer from '../components/ImpressionsContainer'
 
 const IndexPage = () => (
   <Layout>
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <NewsContainer />
     <IntroContainer />
     <PreviewContainer />
+    <ImpressionsContainer />
   </Layout>
 )
 
