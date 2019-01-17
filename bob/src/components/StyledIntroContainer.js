@@ -9,20 +9,24 @@ const StyledIntroContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   .intro__text {
+    width: 50%;
     padding: 0 2rem;
   }
   .intro__image {
+    width: 40%;
     padding: 0 3rem;
   }
   
   @media (max-width: 1200px) {
-    .intro__image {
-      display: none;
+    flex-wrap: wrap;
+    width: 90%;
+    .intro__text, .intro__image {
+      padding: 0 .5rem 5rem .5rem;
     }
   }
   @media (max-width: 550px) {
     margin: 6rem auto;
-    .intro__text {
+    .intro__text, .intro__image {
       width: 80%;
     }
   }

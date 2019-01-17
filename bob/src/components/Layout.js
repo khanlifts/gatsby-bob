@@ -14,7 +14,8 @@ const StyledLayout = styled.div`
   transition: color 2s;
   overflow-x: hidden;
   font-family: Bitter, sans-serif;
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1.8;
 `
 
 const Layout = ({ children }) => (
@@ -24,16 +25,15 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
-            menuItems
           }
         }
       }
     `}
-    render={data => {
+    render={() => {
       return (
       <>
         <StyledLayout>
-          <Header menuItems={data.site.siteMetadata.menuItems} />
+          <Header />
           <div>
             {children}
           </div>

@@ -10,8 +10,8 @@ export default () => (
       query {
         file(relativePath: { eq: "bars.jpg" }) {
           childImageSharp {
-            fixed(width: 466, height: 700) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 466, maxHeight: 700) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -40,7 +40,7 @@ export default () => (
           </p>
         </div>
         <div className="intro__image">
-          <Img fixed={data.file.childImageSharp.fixed}/>
+          <Img fluid={data.file.childImageSharp.fluid}/>
         </div>
       </StyledIntroContainer>)
     }

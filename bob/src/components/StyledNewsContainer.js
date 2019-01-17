@@ -12,6 +12,7 @@ const StyledNewsContainer = styled.div`
     line-height: 1.5;
   }
    @media (max-width: 650px) {
+   width: 70%;
    padding: 0;
    border: none;
    text-align: left;

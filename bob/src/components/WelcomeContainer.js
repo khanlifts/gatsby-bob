@@ -18,9 +18,6 @@ const StyledWelcomeContainer = styled.div`
   
   @media (max-width: 550px) {
     padding: 2rem 0 0 0;
-    .container__right {
-      display: none;
-    }
   }
 `
 
