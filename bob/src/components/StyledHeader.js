@@ -16,34 +16,6 @@ const StyledHeader = styled.div`
     width: 60%;
    }
    
-   @media (max-width: 1050px) {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 200px;
-    text-align: center;
-    .menu ul {
-      flex-direction: column;
-      text-align: center;
-      width: 100%;
-      li > ul {
-      opacity: 0;
-      height: 0;
-      transition: .3s all ease-in;
-      li > a {
-        .menu ul li > ul {
-          opacity: 1;
-          height: 100%;
-        }
-      }
-      }
-      li > ul > li {
-        margin-top: -20px;
-      }
-    }
-    .logo__item {
-      display: none;
-    }
-  }
    
   .menu ul li > ul {
     visibility: hidden;
@@ -79,6 +51,35 @@ const StyledHeader = styled.div`
     text-align: center;
     &:hover {
       color: #b28564;
+    }
+  }
+   @media (max-width: 1050px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+    text-align: center;
+    .menu ul {
+      flex-direction: column;
+      width: 100%;
+      li {
+      }
+      li > ul {
+      opacity: 0;
+      height: 0;
+      transition: .3s all ease-in;
+      li > a {
+        .menu ul li > ul {
+          opacity: 0;
+          height: 100%;
+        }
+      }
+      }
+      li > ul > li {
+        margin-top: -20px;
+      }
+    }
+    .logo__item {
+      display: none;
     }
   }
   
