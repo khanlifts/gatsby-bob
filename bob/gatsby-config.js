@@ -5,8 +5,7 @@ module.exports = {
     title: `Best of Beer Festival`,
     subtitle: `Good People Drink Good Beer`,
     description: `dummy description`,
-    author: `Cyril Khan`,
-    menuItems: [`home`, `sponsoren`, `programm`, `kontakt`, `impressionen`]
+    author: `Cyril Khan`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
