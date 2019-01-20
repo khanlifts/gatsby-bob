@@ -4,20 +4,19 @@ import Img from 'gatsby-image'
 import styled from "styled-components"
 
 const StyledWelcomeContainer = styled.div`
+  height: 100vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 70%;
-  align-items: center;
-  margin: 0 auto;
-  padding: 5rem 0 8rem 0;
-  h1 {
-    margin-bottom: 3rem;
-  }
+  align-items: center; 
+  text-align: center;
   
   @media (max-width: 550px) {
-    padding: 2rem 0 0 0;
+    height: 80vh;
+    margin: 0 2rem 0 2rem;
+    flex-direction: column;
+    justify-content: center;
   }
 `
 

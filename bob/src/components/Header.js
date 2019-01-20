@@ -18,22 +18,28 @@ const Header = () => (
             <li><a href="#">Bierfreunde</a></li>
           </ul>
         </li>
+        <li className="mobile-menu-item"><a href="#">Bierfreunde</a></li>
         <li className="sub-menu"><a href="#">Programm</a>
           <ul>
             <li><a href="#">Biere</a></li>
-            <li><a href="#">Booklet 2018</a></li>
+            <li><a href="#">Booklet</a></li>
             <li><a href="#">Bands</a></li>
             <li><a href="#">Infos</a></li>
           </ul>
         </li>
+        <li className="mobile-menu-item"><a href="#">Biere</a></li>        <li className="mobile-menu-item"><a href="#">Bierfreunde</a></li>
+        <li className="mobile-menu-item"><a href="#">Booklets</a></li>
+        <li className="mobile-menu-item"><a href="#">Bands</a></li>
+        <li className="mobile-menu-item"><a href="#">Infos</a></li>
         <li className="logo__item"><a href="#"><Logo/></a></li>
         <li><a href="#">Kontakt</a></li>
-        <li><a href="#">Impressionen 2018</a>
+        <li><a href="#">Impressionen</a>
           <ul>
             <li><a href="#">Bilder 2018</a></li>
           </ul>
         </li>
-        <li><a href="#"><FaFacebookF/></a></li>
+        <li className="mobile-menu-item"><a href="#">Bilder 2018</a></li>
+        <li><a href="#" className="fa-icon"><FaFacebookF/></a></li>
       </ul>
     </nav>
   </StyledHeader>

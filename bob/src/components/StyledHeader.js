@@ -3,7 +3,7 @@ import styled from "styled-components"
 const StyledHeader = styled.div`
   font-size: 18px;
   margin-top: 4rem;
-  height: 270px;
+  height: 0;
   z-index: 2;
   
   .menu ul {
@@ -18,9 +18,12 @@ const StyledHeader = styled.div`
    
    
   .menu ul li > ul {
-    visibility: hidden;
     flex-direction: column;
+    opacity: 0;
+    height: auto;
+    width: 100%;
     margin-top: 30px;
+    transition: opacity .2s ease-in;
     li {
       width: 100%;
       background-color: white;
@@ -33,8 +36,7 @@ const StyledHeader = styled.div`
   
   .menu ul li:hover > ul {
     display: flex;
-    visibility: visible;
-    width: 100%;
+    opacity: 1;
   } 
   
   .logo__item {
@@ -48,35 +50,50 @@ const StyledHeader = styled.div`
     color: white;
     padding: 15px;
     text-transform: uppercase;
-    text-align: center;
     &:hover {
       color: #b28564;
     }
   }
+  
+  .mobile-menu-item {
+    display: none;
+  }
+  
+  .fa-icon {
+    margin-top: 4px;
+  }
+  
    @media (max-width: 1050px) {
     display: flex;
     justify-content: center;
-    margin-bottom: 200px;
-    text-align: center;
+    padding: 4rem;
+    margin: 2rem;
+    border: 1px solid white;
+    height: auto;
     .menu ul {
       flex-direction: column;
       width: 100%;
       li {
+        transition: all .1s ease-in;
+        width: 60vw;
+      }
+      li:hover {
+        background-color: white;
       }
       li > ul {
-      opacity: 0;
-      height: 0;
-      transition: .3s all ease-in;
-      li > a {
-        .menu ul li > ul {
-          opacity: 0;
-          height: 100%;
-        }
+        display: none;
+        height: 0;
+        transition: .3s all ease-in;
       }
+      li:hover > ul {
+        display: none;
       }
-      li > ul > li {
-        margin-top: -20px;
-      }
+    }
+    .menu a {
+      justify-content: center;
+    }
+    .mobile-menu-item {
+      display: initial;
     }
     .logo__item {
       display: none;
