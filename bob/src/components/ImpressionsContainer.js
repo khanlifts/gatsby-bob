@@ -8,9 +8,23 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        fileName: file(relativePath: { eq: "bars.jpg" }) {
+        imageOne: file(relativePath: { eq: "bob-beer-glasses.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 450, maxHeight: 700) {
+            fluid(maxWidth: 400, maxHeight: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        imageTwo: file(relativePath: { eq: "bob-deciding.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 400, maxHeight: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        imageThree: file(relativePath: { eq: "burning-entries.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 500, maxHeight: 600) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -19,8 +33,32 @@ export default () => (
     `}
     render={data => (
       <StyledImpressionsContainer>
-        <div className="intro__image">
-          <Img fluid={data.fileName.childImageSharp.fluid} />
+        <h2 className="section_title">Impressionen 2018</h2>
+        <div className="gallery">
+          <div className="col-one">
+            <div className="intro__image">
+              <Img fluid={data.imageOne.childImageSharp.fluid} />
+            </div>
+            <div className="intro__image">
+              <Img fluid={data.imageTwo.childImageSharp.fluid} />
+            </div>
+          </div>
+          <div className="col-one">
+            <div className="intro__image">
+              <Img fluid={data.imageThree.childImageSharp.fluid} />
+            </div>
+            <div className="intro__image">
+              <Img fluid={data.imageThree.childImageSharp.fluid} />
+            </div>
+          </div>
+          <div className="col-one">
+            <div className="intro__image">
+              <Img fluid={data.imageThree.childImageSharp.fluid} />
+            </div>
+            <div className="intro__image">
+              <Img fluid={data.imageTwo.childImageSharp.fluid} />
+            </div>
+          </div>
         </div>
       </StyledImpressionsContainer>)
     }
