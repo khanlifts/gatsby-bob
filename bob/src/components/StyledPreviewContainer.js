@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const StyledIntroContainer = styled.div`
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 5rem auto;
   padding-bottom: 10rem;
   display: flex;
   flex-direction: row;
