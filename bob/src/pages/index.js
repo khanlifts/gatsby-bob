@@ -7,17 +7,17 @@ import NewsContainer from '../components/NewsContainer'
 import IntroContainer from '../components/IntroContainer'
 import PreviewContainer from '../components/PreviewContainer'
 import ImpressionsContainer from '../components/ImpressionsContainer'
-import Footer from '../components/Footer'
+import OKContainer from '../components/OKContainer'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <WelcomeContainer />
-    <NewsContainer />
-    <IntroContainer />
-    <PreviewContainer />
-    <ImpressionsContainer />
-    <Footer />
+    <WelcomeContainer/>
+    <NewsContainer/>
+    <IntroContainer/>
+    <PreviewContainer/>
+    <OKContainer/>
+    <ImpressionsContainer/>
   </Layout>
 )
 

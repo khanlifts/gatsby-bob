@@ -22,7 +22,6 @@ export default () => (
       <StyledPreviewContainer>
         <div className="preview__image">
           <Img fixed={data.file.childImageSharp.fixed}/>
-          {/*<Img fluid={data.imageSharp.fluid} />*/}
         </div>
         <div className="preview__title">
           <h2>DAS ERWARTET DICH</h2>
@@ -53,10 +52,3 @@ export default () => (
     }
   />
 )
-
-// todo: this is the working fluid query
-//  imageSharp {
-//   fluid(maxWidth: 700) {
-//     ...GatsbyImageSharpFluid
-//   }
-// }

@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled from "styled-components"
 
 import Header from './Header'
+import Footer from '../components/Footer'
 
 const StyledLayout = styled.div`
   margin: 0;
@@ -33,10 +34,11 @@ const Layout = ({ children }) => (
       return (
       <>
         <StyledLayout>
-          <Header />
+          <Header/>
           <div>
             {children}
           </div>
+          <Footer/>
         </StyledLayout>
       </>
     )}}
