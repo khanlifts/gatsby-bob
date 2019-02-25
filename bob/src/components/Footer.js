@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import Scrollchor from 'react-scrollchor'
 
 import StyledFooter from './StyledFooter'
 import Img from 'gatsby-image'
@@ -22,7 +23,9 @@ export default () => (
         <div className="footer">
           <h4>5. Mai 2018</h4>
           <div className="intro__image">
-            <Img fluid={data.logoBob.childImageSharp.fluid} />
+            <Scrollchor to="">
+              <Img fluid={data.logoBob.childImageSharp.fluid} />
+            </Scrollchor>
           </div>
           <h4>Kloster Stans</h4>
         </div>

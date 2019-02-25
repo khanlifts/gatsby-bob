@@ -33,7 +33,7 @@ export default () => (
     `}
     render={data => (
       <StyledImpressionsContainer>
-        <h2 className="section_title">Impressionen 2018</h2>
+        <h2 id="impressions" className="section_title">Impressionen 2018</h2>
         <div className="gallery">
           <div className="col-one">
             <div className="intro__image">
