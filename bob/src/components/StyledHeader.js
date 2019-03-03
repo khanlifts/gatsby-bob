@@ -1,9 +1,13 @@
 import styled from "styled-components"
 
 const StyledHeader = styled.div`
+  position: fixed;
+  top: 0;
+  width: calc(100% - 16px);
+  padding-top: 3rem;
+  height: 5.5rem;
+  background: black;
   font-size: 18px;
-  margin-top: 4rem;
-  height: 0;
   z-index: 2;
   
   .menu ul {
@@ -34,11 +38,6 @@ const StyledHeader = styled.div`
     }
   }  
   
-  .menu ul li:hover > ul {
-    display: flex;
-    opacity: 1;
-  } 
-  
   .logo__item {
     position: relative;
     bottom: 30px;
@@ -55,15 +54,16 @@ const StyledHeader = styled.div`
     }
   }
   
-  .mobile-menu-item {
-    display: none;
-  }
-  
-  .fa-icon {
+  .fa-facebook {
     margin-top: 4px;
   }
   
-   @media (max-width: 1050px) {
+  .fa-beer {
+    display: none; 
+  }
+  
+   @media (max-width: 850px) {
+    width: 40%;
     display: flex;
     justify-content: center;
     padding: 4rem;
@@ -73,33 +73,36 @@ const StyledHeader = styled.div`
     .menu ul {
       flex-direction: column;
       width: 100%;
+      padding: 0;
       li {
         transition: all .1s ease-in;
-        width: 60vw;
+        width: 40vw;
       }
       li:hover {
         background-color: white;
-      }
-      li > ul {
-        display: none;
-        height: 0;
-        transition: .3s all ease-in;
-      }
-      li:hover > ul {
-        display: none;
       }
     }
     .menu a {
       justify-content: center;
     }
-    .mobile-menu-item {
-      display: initial;
-    }
     .logo__item {
       display: none;
     }
+    
+   .fa-beer {
+      display: unset;
+      font-size: 50px;
+      position: absolute;
+      top: -4px;
+      right: -70px;
+      transition: transform .5s ease;
+      cursor: pointer;
+    }
+   .fa-beer:hover {
+      color: #B28564;
+      transform: rotate(-32deg);
+   }
   }
-  
 `
 
 export default StyledHeader
