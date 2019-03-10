@@ -4,7 +4,7 @@ const StyledHeader = styled.div`
   .menu-wrapper {
     position: fixed;
     top: 0;
-    width: calc(100% - 16px);
+    width: 100%;
     padding-top: 3rem;
     height: 5.5rem;
     background: black;
@@ -105,7 +105,7 @@ const StyledHeader = styled.div`
       font-size: 50px;
       position: fixed;
       top: 25px;
-      left: 0px;
+      left: 0;
       transition: transform .3s ease;
       cursor: pointer;
       padding-left: 30px;

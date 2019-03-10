@@ -2,9 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from "styled-components"
+import { createGlobalStyle } from 'styled-components'
 
 import Header from './Header'
 import Footer from '../components/Footer'
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+  }
+`
 
 const StyledLayout = styled.div`
   margin: 0;
@@ -33,6 +40,7 @@ const Layout = ({ children }) => (
     render={() => {
       return (
       <>
+        <GlobalStyle/>
         <StyledLayout>
           <Header/>
           <div>
