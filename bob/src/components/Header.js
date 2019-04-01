@@ -9,7 +9,13 @@ class Header extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      showMenu: window.innerWidth >= 850
+      showMenu: this.setShowMenu()
+    }
+  }
+
+  setShowMenu = () => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth >= 850
     }
   }
 
